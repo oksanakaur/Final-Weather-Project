@@ -2,50 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
     <title>Weather Forecast</title>
 </head>
-<body>
-    <div class=" weather-app-container">
-        <header>
-        <form class="search-form" id="search-form">
-            <input 
-            type="search"
-            placeholder="Enter a city..."
-            class="search-form-input"
-            required
-            id="search-form-input"
-            />
-            <input type="submit" value="Search" class="search-form-submit" />
-        </form>
-    </header>
-    <main class="current-weather">
-        <div class="highlights">
-            <h1 id="defined-city"></h1>
-            <ul>
-                <li>
-                    <span id="dayTime"></span>,
-                    <span id="description">moderate rain</span>
-                </li>
-                <li>
-                    Humidity:
-                    <strong>
-                        <span id="weather-highlights" id="wind"></span>
-                    </strong>
-                </li>
-            </ul>
-        </div>
-        <div class="temperature">
-            <h2>
-                <span id="temperature-pic"></span>
-                <span class="temperature-value" id="temperature-value"></span>
-                <span class="temperature-unit">°C</span>
-            </h2>
-        </div>
-        </div>
-        <div class="weather-forecast-container" id="forecast"></div>
-    </main>
+ <body>
+        <div class="weather-app">
+            <header>
+                <form class="search-form" id="search-form">
+                    <input type="search" placeholder="Enter city name..." required class="search-form-input"
+                        id="search-form-input" />
+                    <input type="submit" value="Search" class="search-form-button" />
+                </form>
+            </header>
+
+            <main>
+                <div class="weather-app-data">
+                    <div>
+                        <h1 class="weather-app-city" id="city"></h1>
+                        <p class="weather-app-details"><span id="time"></span>, <span id="description"></span>
+                            <br />
+                            Humidity: <strong id="humidity"></strong> Wind: <strong id="wind-speed"></strong>
+                        </p>
+                    </div>
+                    <div class="weather-app-temperature-container">
+                        <div class="weather-forecast-icon" id="icon"></div>
+                        <div class=" weather-app-temperature" id="temperature"></div>
+                        <div class="weather-app-unit">°C</div>
+                    </div>
+                </div>
+                <div class="weather-forecast" id="forecast"></div>
+            </main>
     <footer>
         <p>
             This project is coded by
